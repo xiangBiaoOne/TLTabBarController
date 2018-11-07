@@ -110,11 +110,11 @@ static char *tl_actionBlock = "__tl_actionBlock";
     return [objc_getAssociatedObject(self, tl_isPlusButton) boolValue];
 }
 
-- (void)setClickActionBlock:(BOOL (^)())clickActionBlock
+- (void)setClickActionBlock:(BOOL (^)(void))clickActionBlock
 {
     objc_setAssociatedObject(self, tl_actionBlock, clickActionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-- (BOOL (^)())clickActionBlock
+- (BOOL (^)(void))clickActionBlock
 {
     return objc_getAssociatedObject(self, tl_actionBlock);
 }

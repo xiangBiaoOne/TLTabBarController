@@ -101,7 +101,7 @@
     [self setValue:[TLTabBar new] forKey:@"tabBar"];
 }
 
-- (void)addChildViewController:(UIViewController *)viewController actionBlock:(BOOL (^)())actionBlock
+- (void)addChildViewController:(UIViewController *)viewController actionBlock:(BOOL (^)(void))actionBlock
 {
     [super addChildViewController:viewController];
     
@@ -115,7 +115,7 @@
     }
 }
 
-- (void)addPlusItemWithSystemTabBarItem:(UITabBarItem *)systemTabBarItem actionBlock:(void (^)())actionBlock
+- (void)addPlusItemWithSystemTabBarItem:(UITabBarItem *)systemTabBarItem actionBlock:(void (^)(void))actionBlock
 {
     [systemTabBarItem setIsPlusButton:YES];
     UIViewController *vc = [[UIViewController alloc] init];

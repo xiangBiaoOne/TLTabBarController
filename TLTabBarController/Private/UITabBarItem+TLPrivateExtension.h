@@ -25,6 +25,6 @@
 @property (nonatomic, strong, readonly) TLBadge *tlBadge;
 
 /// 点击事件，默认nil或返回YES执行页面页面跳转
-@property (nonatomic, copy) BOOL (^clickActionBlock)();
+@property (nonatomic, copy) BOOL (^clickActionBlock)(void);
 
 @end
